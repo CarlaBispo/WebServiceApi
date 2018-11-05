@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ConsumerWebService</string>
+
+    <string name="hair_color">Hair</string>
+    <string name="skin_color">Skin</string>
+    <string name="birth_year">Birth</string>
+    <string name="gender">Gender</string>
+    <string name="name">Name</string>
+
+
+</resources>

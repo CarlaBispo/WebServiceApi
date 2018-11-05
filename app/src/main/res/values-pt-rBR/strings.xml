@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TreinoPs</string>
+
+    <string name="name">Nome</string>
+    <string name="hair_color">Belo</string>
+    <string name="skin_color">Pele</string>
+    <string name="birth_year">Niver</string>
+    <string name="gender">Gene</string>
+
+</resources>
