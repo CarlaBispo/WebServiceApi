@@ -1,16 +1,13 @@
 package com.carlatatiana.corem.treinops
 
-import Api.CaracterService
+
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_pesquisa.*
-import kotlinx.android.synthetic.main.activity_resultado.*
-import model.Caracter
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+
 
 
 class PesquisaActivity : AppCompatActivity() {
@@ -19,21 +16,28 @@ class PesquisaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pesquisa)
 
+        // botao pesquisar
+
         btPesquisar.setOnClickListener {
-            val retrofit  = Retrofit.Builder()
-                .baseUrl("https://swapi.co/api/people/1")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-
-            val service = retrofit.create(CaracterService::class.java)
-
-
-
-
+            val ir = btPesquisar
+            val intent = Intent(this, ResultadoActivity::class.java)
+            intent.putExtra("1", etCodigo.text.toString())
+            startActivity(intent)
+            //finish()
         }
     }
 
+    //botao sobre
+
+    fun sobre(view: View){
+        val sobre = btSobre
+        val intent = Intent(this, SobreActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+
 }
+
 
 
 
