@@ -9,7 +9,7 @@ import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
 
-    private val SPLASH_DISPLAY_LENGTH = 5500L
+    private val SPLASH_DISPLAY_LENGTH = 3500L
     lateinit var ivSplash: ImageView
 
 
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         ivSplash.startAnimation(anim)
 
         Handler().postDelayed({
-            val intent = Intent(this@MainActivity, SobreActivity::class.java)
+            val intent = Intent(this, SobreActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
             startActivity(intent)
             this.finish()
